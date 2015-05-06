@@ -1,0 +1,6 @@
+{
+  "token_type": "http://schemas.xmlsoap.org/ws/2009/11/swt-token-profile-1.0",
+  "access_token": "hogehoge",
+  "expires_in": "600",
+  "scope": "http://api.microsofttranslator.com"
+}
