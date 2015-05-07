@@ -4,6 +4,7 @@ namespace Hum2\BingResource\Resource\App;
 
 use BEAR\Resource\ResourceObject;
 use GuzzleHttp\ClientInterface;
+use Hum2\BingResource\Module\Annotation\AzureAccessToken;
 use Hum2\BingResource\Module\Transfer\Language;
 use Ray\Di\Di\Inject;
 
@@ -50,6 +51,8 @@ class Transfer extends ResourceObject
      * @param string $to
      *
      * @return $this
+     *
+     * @AzureAccessToken
      */
     public function onGet($text, $from = Language::JAPANESE, $to = Language::ENGLISH)
     {

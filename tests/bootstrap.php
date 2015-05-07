@@ -2,6 +2,7 @@
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
 use Hum2\BingResource;
+use BEAR\Package\Bootstrap;
 
 error_reporting(E_ALL);
 

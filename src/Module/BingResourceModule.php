@@ -2,11 +2,11 @@
 
 namespace Hum2\BingResource\Module;
 
-use BEAR\Package\PackageModule;
 use BEAR\Resource\Module\SchemeCollectionProvider;
 use BEAR\Resource\SchemeCollectionInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
+use Hum2\BingResource\Module\Annotation\AzureAccessToken;
 use Hum2\BingResource\Resource\App\Transfer;
 use Ray\Di\AbstractModule;
 use Ray\Di\Scope;
@@ -35,20 +35,15 @@ class BingResourceModule extends AbstractModule
     protected function configure()
     {
         $this->bind()->annotatedWith('bing_app_name')->toInstance('Hum2\BingResource');
-        $this->bind(SchemeCollectionInterface::class)->annotatedWith('defaultScheme')->toProvider(SchemeCollectionProvider::class);
+        $this->bind(SchemeCollectionInterface::class)->annotatedWith('default_scheme')->toProvider(SchemeCollectionProvider::class);
         $this->bind(SchemeCollectionInterface::class)->toProvider(BingSchemeCollectionProvider::class)->in(Scope::SINGLETON);
         $this->bind(ClientInterface::class)->to(Client::class)->in(Scope::SINGLETON);
         $this->bind()->annotatedWith('azure_client_id')->toInstance($this->clientId);
         $this->bind()->annotatedWith('azure_client_secret')->toInstance($this->clientSecret);
 
         $this->bindInterceptor(
-            $this->matcher->subclassesOf(Transfer::class),
-            $this->matcher->logicalOr(
-                $this->matcher->startsWith('onGet'),
-                $this->matcher->startsWith('onPost'),
-                $this->matcher->startsWith('onPut'),
-                $this->matcher->startsWith('onDelete')
-            ),
+            $this->matcher->annotatedWith(AzureAccessToken::class),
+            $this->matcher->any(),
             [AccessTokenInterceptor::class]
         );
     }

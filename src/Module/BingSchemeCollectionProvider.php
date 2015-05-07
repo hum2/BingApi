@@ -33,7 +33,7 @@ class BingSchemeCollectionProvider implements ProviderInterface
      * @param                           $appName
      *
      * @Inject
-     * @Named("schemeCollection=defaultScheme,appName=bing_app_name")
+     * @Named("schemeCollection=default_scheme,appName=bing_app_name")
      */
     public function __construct(InjectorInterface $injector, SchemeCollectionInterface $schemeCollection, $appName)
     {

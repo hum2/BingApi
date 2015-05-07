@@ -4,7 +4,7 @@ namespace Hum2\BingResource\Module;
 
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
-use Hum2\BingResource\Module\Azure\Exception\InvalidTokenException;
+use Hum2\BingResource\Module\Azure\Exception\InvalidAccessTokenException;
 use Ray\Aop\MethodInterceptor;
 use Ray\Aop\MethodInvocation;
 use Ray\Di\Di\Inject;
@@ -89,7 +89,7 @@ class AccessTokenInterceptor implements MethodInterceptor
         $body = json_decode($response->getBody(), true);
 
         if (isset($body['error'])) {
-            throw new InvalidTokenException($body['description']);
+            throw new InvalidAccessTokenException($body['description']);
         }
 
         return $body;
