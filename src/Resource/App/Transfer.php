@@ -1,16 +1,16 @@
 <?php
 
-namespace Hum2\BingResource\Resource\App;
+namespace Hum2\BingApi\Resource\App;
 
 use BEAR\Resource\ResourceObject;
 use GuzzleHttp\ClientInterface;
-use Hum2\BingResource\Module\Annotation\AzureAccessToken;
-use Hum2\BingResource\Module\Transfer\Language;
+use Hum2\BingApi\Module\Annotation\AzureAccessToken;
+use Hum2\BingApi\Module\Transfer\Language;
 use Ray\Di\Di\Inject;
 
 /**
  * Class Transfer
- * @package Hum2\BingResource\Resource\App
+ * @package Hum2\BingApi\Resource\App
  * @see     https://msdn.microsoft.com/en-us/library/ff512421.aspx
  */
 class Transfer extends ResourceObject

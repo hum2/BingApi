@@ -1,12 +1,12 @@
 {
-  "name": "Hum2/BingResource",
+  "name": "Hum2/BingApi",
   "description": "This is Bing API Resource.",
   "keywords": [
     "BEAR.Sunday",
     "BEAR.Resource",
     "Bing"
   ],
-  "homepage": "https://github.com/Hum2/BingResource",
+  "homepage": "https://github.com/Hum2/BingApi",
   "license": "MIT",
   "authors": [
     {
@@ -26,14 +26,14 @@
   },
   "autoload": {
     "psr-4": {
-      "Hum2\\BingResource\\": "src/"
+      "Hum2\\BingApi\\": "src/"
     }
   },
   "minimum-stability": "dev",
   "prefer-stable": true,
   "autoload-dev": {
     "psr-4": {
-      "Tests\\Hum2\\BingResource\\": "tests/"
+      "Tests\\Hum2\\BingApi\\": "tests/"
     }
   }
 }

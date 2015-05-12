@@ -1,10 +1,10 @@
 <?php
 
-namespace Hum2\BingResource\Module\Transfer;
+namespace Hum2\BingApi\Module\Transfer;
 
 /**
  * Class Language
- * @package Hum2\BingResource\Module\Transfer
+ * @package Hum2\BingApi\Module\Transfer
  * @see     https://msdn.microsoft.com/en-us/library/hh456380.aspx
  */
 class Language

@@ -1,6 +1,6 @@
 <?php
 
-namespace Hum2\BingResource\Module;
+namespace Hum2\BingApi\Module;
 
 use BEAR\Resource\AppAdapter;
 use BEAR\Resource\SchemeCollection;

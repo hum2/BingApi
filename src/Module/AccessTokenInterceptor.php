@@ -1,10 +1,10 @@
 <?php
 
-namespace Hum2\BingResource\Module;
+namespace Hum2\BingApi\Module;
 
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\RequestException;
-use Hum2\BingResource\Module\Azure\Exception\InvalidAccessTokenException;
+use Hum2\BingApi\Module\Azure\Exception\InvalidAccessTokenException;
 use Ray\Aop\MethodInterceptor;
 use Ray\Aop\MethodInvocation;
 use Ray\Di\Di\Inject;

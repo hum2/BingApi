@@ -1,17 +1,17 @@
 <?php
 
-namespace Hum2\BingResource\Module;
+namespace Hum2\BingApi\Module;
 
 use BEAR\Resource\Module\SchemeCollectionProvider;
 use BEAR\Resource\SchemeCollectionInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
-use Hum2\BingResource\Module\Annotation\AzureAccessToken;
-use Hum2\BingResource\Resource\App\Transfer;
+use Hum2\BingApi\Module\Annotation\AzureAccessToken;
+use Hum2\BingApi\Resource\App\Transfer;
 use Ray\Di\AbstractModule;
 use Ray\Di\Scope;
 
-class BingResourceModule extends AbstractModule
+class AppModule extends AbstractModule
 {
     /**
      * @var string Azure Client ID
@@ -34,7 +34,7 @@ class BingResourceModule extends AbstractModule
      */
     protected function configure()
     {
-        $this->bind()->annotatedWith('bing_app_name')->toInstance('Hum2\BingResource');
+        $this->bind()->annotatedWith('bing_app_name')->toInstance('Hum2\BingApi');
         $this->bind(SchemeCollectionInterface::class)->annotatedWith('default_scheme')->toProvider(SchemeCollectionProvider::class);
         $this->bind(SchemeCollectionInterface::class)->toProvider(BingSchemeCollectionProvider::class)->in(Scope::SINGLETON);
         $this->bind(ClientInterface::class)->to(Client::class)->in(Scope::SINGLETON);

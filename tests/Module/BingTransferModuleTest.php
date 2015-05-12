@@ -1,18 +1,18 @@
 <?php
 
-namespace Tests\Hum2\BingResource\Module;
+namespace Tests\Hum2\BingApi\Module;
 
 use BEAR\Package\PackageModule;
 use BEAR\Resource\Code;
 use BEAR\Resource\ResourceInterface;
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
-use Hum2\BingResource\Module\BingResourceModule;
-use Hum2\BingResource\Resource\App\Transfer;
+use Hum2\BingApi\Module\BingApiModule;
+use Hum2\BingApi\Resource\App\Transfer;
 use Ray\Di\Exception;
 use Ray\Di\Injector;
 
-class BingResourceModuleTest extends \PHPUnit_Framework_TestCase
+class BingApiModuleTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * @var Injector
@@ -22,7 +22,7 @@ class BingResourceModuleTest extends \PHPUnit_Framework_TestCase
     public function setUp()
     {
         $module = new PackageModule();
-        $module->override(new BingResourceModule($GLOBALS['azure_client_id'], $GLOBALS['azure_client_secret']));
+        $module->override(new BingApiModule($GLOBALS['azure_client_id'], $GLOBALS['azure_client_secret']));
         $this->injector = new Injector($module);
     }
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace Tests\Hum2\BingResource\Module;
+namespace Tests\Hum2\BingApi\Module;
 
 use BEAR\Resource\Code;
-use Hum2\BingResource\Module\AccessTokenInterceptor;
+use Hum2\BingApi\Module\AccessTokenInterceptor;
 use Ray\Aop\Arguments;
 use Ray\Aop\ReflectiveMethodInvocation;
-use Tests\Hum2\BingResource\Fake\FakeAccessTokenClient;
-use Tests\Hum2\BingResource\Fake\FakeResource;
+use Tests\Hum2\BingApi\Fake\FakeAccessTokenClient;
+use Tests\Hum2\BingApi\Fake\FakeResource;
 
 class AccessTokenInterceptorTest extends \PHPUnit_Framework_TestCase
 {

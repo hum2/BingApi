@@ -1,6 +1,6 @@
 <?php
 
-namespace Hum2\BingResource\Module\Annotation;
+namespace Hum2\BingApi\Module\Annotation;
 
 /**
  * @Annotation

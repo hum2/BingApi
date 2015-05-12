@@ -1,13 +1,13 @@
 <?php
 
-namespace Hum2\BingResource\Resource\App\Transfer;
+namespace Hum2\BingApi\Resource\App\Transfer;
 
 use BEAR\Resource\ResourceObject;
-use Hum2\BingResource\Module\Transfer\Language;
+use Hum2\BingApi\Module\Transfer\Language;
 
 /**
  * Class Languages
- * @package Hum2\BingResource\Resource\App\Transfer
+ * @package Hum2\BingApi\Resource\App\Transfer
  */
 class Languages extends ResourceObject
 {

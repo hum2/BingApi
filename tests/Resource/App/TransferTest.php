@@ -1,11 +1,11 @@
 <?php
 
-namespace Tests\Hum2\BingResource\Resource\App;
+namespace Tests\Hum2\BingApi\Resource\App;
 
-use Hum2\BingResource\Module\Transfer\Language;
-use Hum2\BingResource\Resource\App\Transfer;
+use Hum2\BingApi\Module\Transfer\Language;
+use Hum2\BingApi\Resource\App\Transfer;
 use Ray\Di\Exception;
-use Tests\Hum2\BingResource\Fake\FakeTransferClient;
+use Tests\Hum2\BingApi\Fake\FakeTransferClient;
 
 class TransferTest extends \PHPUnit_Framework_TestCase
 {

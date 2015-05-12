@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Hum2\BingResource\Fake;
+namespace Tests\Hum2\BingApi\Fake;
 
 use BEAR\Resource\ResourceObject;
 

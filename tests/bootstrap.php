@@ -1,7 +1,7 @@
 <?php
 
 use Doctrine\Common\Annotations\AnnotationRegistry;
-use Hum2\BingResource;
+use Hum2\BingApi;
 use BEAR\Package\Bootstrap;
 
 error_reporting(E_ALL);
